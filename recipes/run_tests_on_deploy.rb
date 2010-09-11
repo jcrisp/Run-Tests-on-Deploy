@@ -94,7 +94,7 @@ namespace :deploy do
   task :run_tests do
    unless fetch(:run_tests, "1") == "0"     
      run "cd #{release_path} && rake db:test:prepare" 
-     run "cd #{release_path} && nice -n 10 rake RAILS_ENV=production test" 
+     run "cd #{release_path} && nice -n 10 rake" 
    end
   end
 
